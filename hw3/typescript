@@ -1,0 +1,283 @@
+Script started on Thu Jan 22 19:51:52 2015
+%cat hw_3.adb
+-- Garrison Bybee
+-- Hw 3 SE320
+-- 1/20/15
+-- This program will do the factorization from the number 2 to 99
+
+with Ada.text_io, Ada.Integer_Text_Io, primeid;
+use Ada.text_io, Ada.Integer_Text_Io, primeid;
+
+
+procedure hw_3 is
+
+begin
+
+   for I in 2..99 loop
+      if (IsPrime (I)) then
+         New_Line; -- All the New_Lines are use for better formatting
+         Put(I,0);
+         Put(" is prime");
+         New_Line;
+         New_Line;
+      else
+         Factoring(I);
+      end if;
+
+
+
+
+
+
+   end loop;
+
+
+
+
+end hw_3;
+%cat prie[Kmeid.ads
+-- Garrison Bybee
+-- 1/20/15
+-- SE 320
+-- Primeid and Factoring Package for Hw_3
+
+package primeid is
+
+   function IsPrime(Num_Prime : Integer) return Boolean;
+   procedure Factoring (Num_Factor : Integer);
+
+end primeid;
+%cat primeid.adb
+-- Garrison Bybee
+-- 1/20/15
+-- SE 320
+-- PrimeId and Factoring Package body for Hw_3
+
+with Ada.Text_Io, Ada.Integer_Text_Io;
+use Ada.Text_Io, Ada.Integer_Text_Io;
+
+package body primeid is
+
+   function IsPrime (Num_Prime : Integer) return Boolean is -- Function to determine if given number is prime
+      ModTwo, ModThree, ModFive, ModSeven : Integer;
+
+   begin
+
+      ModTwo := (Num_Prime mod 2);
+      ModThree := (Num_Prime mod 3);
+      ModFive := (Num_Prime mod 5);
+      ModSeven := (Num_Prime mod 7);
+
+      if (Num_Prime = 2 or Num_Prime = 3 or Num_Prime = 5 or Num_Prime = 7) then
+         return True;
+
+      elsif (ModTwo = 0 or ModThree = 0 or ModFive = 0 or ModSeven = 0) then
+         return False;
+
+      else
+         return True;
+
+      end if;
+
+   end IsPrime;
+
+   procedure Factoring (Num_Factor : Integer ) is                     -- Procedure that will determine the given numbers factorization
+      Checker, Factor_Mod, Prime_Chk, Divided_Num, Counter : Integer; -- Checker is used to check and see if the number is a factor of the Num_Factor. Factormod is
+                                                                      -- modulus between the checker and the number given to the function. Primechk is the modulus for
+                                                                      -- the Num_Factor and the checker. DividedNum is the checker being divided into. Counter is used
+                                                                      -- to help determine if an * should be displayed.
+   begin
+      Counter := 0;
+      Checker := 2;
+      Put("The factorization of ");
+      Put(Num_Factor,0);
+      Put(" is: ");
+
+      for I in Checker .. Num_Factor loop
+
+         if (IsPrime(Checker)) then
+           Factor_Mod := (Num_Factor mod Checker);
+           Prime_Chk := (Num_Factor mod Checker);
+           Divided_Num := Num_Factor / Checker;
+
+           while (Prime_Chk = 0) loop
+              Counter := Counter + 1;
+
+              if (Factor_Mod = 0 and Counter = 1) then
+                Put(Checker,0);
+              else
+                 Put("*");
+                 Put(Checker,0);
+              end if;
+
+              Prime_Chk := (Divided_Num mod Checker);
+              Divided_Num := Divided_Num / Checker;
+
+           end loop;
+         end if;
+         Checker := Checker + 1; -- to make sure that checker changes and will eventaully be one less than Num_Factor
+      end loop;
+      New_Line; -- For better formating
+   end Factoring;
+end primeid;
+
+
+
+%gnatmake hw_3.adb
+gcc -c hw_3.adb
+gcc -c primeid.adb
+gnatbind -x hw_3.ali
+gnatlink hw_3.ali
+%hw_3
+
+2 is prime
+
+
+3 is prime
+
+The factorization of 4 is: 2*2
+
+5 is prime
+
+The factorization of 6 is: 2*3
+
+7 is prime
+
+The factorization of 8 is: 2*2*2
+The factorization of 9 is: 3*3
+The factorization of 10 is: 2*5
+
+11 is prime
+
+The factorization of 12 is: 2*2*3
+
+13 is prime
+
+The factorization of 14 is: 2*7
+The factorization of 15 is: 3*5
+The factorization of 16 is: 2*2*2*2
+
+17 is prime
+
+The factorization of 18 is: 2*3*3
+
+19 is prime
+
+The factorization of 20 is: 2*2*5
+The factorization of 21 is: 3*7
+The factorization of 22 is: 2*11
+
+23 is prime
+
+The factorization of 24 is: 2*2*2*3
+The factorization of 25 is: 5*5
+The factorization of 26 is: 2*13
+The factorization of 27 is: 3*3*3
+The factorization of 28 is: 2*2*7
+
+29 is prime
+
+The factorization of 30 is: 2*3*5
+
+31 is prime
+
+The factorization of 32 is: 2*2*2*2*2
+The factorization of 33 is: 3*11
+The factorization of 34 is: 2*17
+The factorization of 35 is: 5*7
+The factorization of 36 is: 2*2*3*3
+
+37 is prime
+
+The factorization of 38 is: 2*19
+The factorization of 39 is: 3*13
+The factorization of 40 is: 2*2*2*5
+
+41 is prime
+
+The factorization of 42 is: 2*3*7
+
+43 is prime
+
+The factorization of 44 is: 2*2*11
+The factorization of 45 is: 3*3*5
+The factorization of 46 is: 2*23
+
+47 is prime
+
+The factorization of 48 is: 2*2*2*2*3
+The factorization of 49 is: 7*7
+The factorization of 50 is: 2*5*5
+The factorization of 51 is: 3*17
+The factorization of 52 is: 2*2*13
+
+53 is prime
+
+The factorization of 54 is: 2*3*3*3
+The factorization of 55 is: 5*11
+The factorization of 56 is: 2*2*2*7
+The factorization of 57 is: 3*19
+The factorization of 58 is: 2*29
+
+59 is prime
+
+The factorization of 60 is: 2*2*3*5
+
+61 is prime
+
+The factorization of 62 is: 2*31
+The factorization of 63 is: 3*3*7
+The factorization of 64 is: 2*2*2*2*2*2
+The factorization of 65 is: 5*13
+The factorization of 66 is: 2*3*11
+
+67 is prime
+
+The factorization of 68 is: 2*2*17
+The factorization of 69 is: 3*23
+The factorization of 70 is: 2*5*7
+
+71 is prime
+
+The factorization of 72 is: 2*2*2*3*3
+
+73 is prime
+
+The factorization of 74 is: 2*37
+The factorization of 75 is: 3*5*5
+The factorization of 76 is: 2*2*19
+The factorization of 77 is: 7*11
+The factorization of 78 is: 2*3*13
+
+79 is prime
+
+The factorization of 80 is: 2*2*2*2*5
+The factorization of 81 is: 3*3*3*3
+The factorization of 82 is: 2*41
+
+83 is prime
+
+The factorization of 84 is: 2*2*3*7
+The factorization of 85 is: 5*17
+The factorization of 86 is: 2*43
+The factorization of 87 is: 3*29
+The factorization of 88 is: 2*2*2*11
+
+89 is prime
+
+The factorization of 90 is: 2*3*3*5
+The factorization of 91 is: 7*13
+The factorization of 92 is: 2*2*23
+The factorization of 93 is: 3*31
+The factorization of 94 is: 2*47
+The factorization of 95 is: 5*19
+The factorization of 96 is: 2*2*2*2*2*3
+
+97 is prime
+
+The factorization of 98 is: 2*7*7
+The factorization of 99 is: 3*3*11
+%exit
+exit
+
+Script done on Thu Jan 22 19:52:44 2015
