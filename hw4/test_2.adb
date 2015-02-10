@@ -1,0 +1,22 @@
+with Ada.Text_Io, Ada.Integer_Text_Io, primeId;
+use Ada.Text_Io, Ada.Integer_Text_Io, primeId;
+
+procedure test_2 is
+
+   User_Num : Integer := 1;
+
+begin
+   while User_Num /= 0 loop
+
+      Put("Enter a number zero will end it ");
+      Get(User_Num);
+      if IsPrime(User_Num) then
+         Put_Line("This number is prime");
+      else
+         Put_Line("This number isnt prime");
+
+      end if;
+
+   end loop;
+
+end test_2;

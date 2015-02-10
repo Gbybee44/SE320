@@ -1,0 +1,73 @@
+V "GNAT Lib v4.4"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnnnnvnnvnnnvvnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U hw_4%b		hw_4.adb		8d2ca171 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W primeid%s		primeid.adb		primeid.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20090114110545 9c7dd3ea
+D a-except.ads		20090414134449 b54b55de
+D a-finali.ads		20090414134820 9eaacebd
+D a-filico.ads		20090414134951 9299732a
+D a-inteio.ads		20090114110546 03bc737c
+D a-ioexce.ads		20090114110546 be0900a0
+D a-stream.ads		20090414134419 34aca5be
+D a-tags.ads		20090414134730 bfa07446
+D a-textio.ads		20090414134822 fe8af46e
+D a-tiinio.ads		20090414134653 949a7272
+D a-unccon.ads		20090114110545 51e09df2
+D hw_4.adb		20150130233018 7986b1cb
+D interfac.ads		20090414134625 a69cad5c
+D i-cstrea.ads		20090414134744 e1e064a9
+D primeid.ads		20150130233603 099c97a8
+D system.ads		20090414134649 df55302f
+D s-crtl.ads		20090414134633 997234a1
+D s-exctab.ads		20090414134921 5c1c61ae
+D s-ficobl.ads		20090414134918 8bb681e5
+D s-finimp.ads		20090414135057 9449f4cb
+D s-finroo.ads		20090414134701 1408f9d1
+D s-parame.ads		20090414134647 f32e56e9
+D s-secsta.ads		20090414134519 7bae3621
+D s-soflin.ads		20090414134425 0c6fd39d
+D s-stache.ads		20090414134825 257b3be8
+D s-stalib.ads		20090414135007 52b793d5
+D s-stoele.ads		20090414134841 ed966df3
+D s-stoele.adb		20090414134835 e9998c78
+D s-stratt.ads		20090414134859 fef7c1da
+D s-traent.ads		20090414134453 bd5f2753
+D s-unstyp.ads		20090414134601 c0f9fae5
+D s-wchcon.ads		20090414134706 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 12|7r6 7r19 8r5 8r18
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 12|7w23 8r22
+X 9 a-textio.ads
+48K13*Text_IO 506e16 12|7w10 8r9
+166U14*New_Line 12|31r13 35r13 38r13
+242U14*Put 12|20r7 30r13 33r13 37r13 43r4
+249U14*Get_Line 12|34r13
+298X4*Data_Error 12|32r15
+X 10 a-tiinio.ads
+55U14*Get 12|21r7[5|18]
+65U14*Put 12|44r4[5|18]
+X 12 hw_4.adb
+10U11*Hw_4 10b11 47l5 47t9
+11i4 Valid_Range{integer} 21m11 23r18 44r8
+12b4 Prime_Yes{boolean} 18r11 26m7
+13a4 Garage_Handler{string} 34m22
+14i4 End_Of_Character{integer} 34m38
+15X4 Not_Prime 24r16 36r15
+X 15 primeid.ads
+6K9*primeId 12|7w40 8r39 15|10e12
+8V13*IsPrime{boolean} 12|23r10
+
