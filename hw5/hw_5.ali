@@ -1,0 +1,84 @@
+V "GNAT Lib v4.4"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnvnnvnnvnnnvnnnnnvnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U hw_5%b		hw_5.adb		04922a37 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.enumeration_aux%s  a-tienau.adb	a-tienau.ali
+W system%s		system.ads		system.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+
+D ada.ads		20090114110545 9c7dd3ea
+D a-except.ads		20090414134449 b54b55de
+D a-finali.ads		20090414134820 9eaacebd
+D a-filico.ads		20090414134951 9299732a
+D a-inteio.ads		20090114110546 03bc737c
+D a-ioexce.ads		20090114110546 be0900a0
+D a-stream.ads		20090414134419 34aca5be
+D a-tags.ads		20090414134730 bfa07446
+D a-textio.ads		20090414134822 fe8af46e
+D a-tienau.ads		20090414134912 671c7a9a
+D a-tienio.ads		20090414135046 213fedba
+D a-tienio.adb		20090414135043 ba330dab
+D a-tiinio.ads		20090414134653 949a7272
+D a-unccon.ads		20090114110545 51e09df2
+D hw_5.adb		20150205211922 f9a4ad25
+D interfac.ads		20090414134625 a69cad5c
+D i-cstrea.ads		20090414134744 e1e064a9
+D system.ads		20090414134649 df55302f
+D s-crtl.ads		20090414134633 997234a1
+D s-exctab.ads		20090414134921 5c1c61ae
+D s-ficobl.ads		20090414134918 8bb681e5
+D s-finimp.ads		20090414135057 9449f4cb
+D s-finroo.ads		20090414134701 1408f9d1
+D s-imenne.ads		20090414134936 97a402ea
+D s-parame.ads		20090414134647 f32e56e9
+D s-secsta.ads		20090414134519 7bae3621
+D s-soflin.ads		20090414134425 0c6fd39d
+D s-stache.ads		20090414134825 257b3be8
+D s-stalib.ads		20090414135007 52b793d5
+D s-stoele.ads		20090414134841 ed966df3
+D s-stoele.adb		20090414134835 e9998c78
+D s-stratt.ads		20090414134859 fef7c1da
+D s-traent.ads		20090414134453 bd5f2753
+D s-unstyp.ads		20090414134601 c0f9fae5
+D s-valenu.ads		20090414134424 9e547a01
+D s-wchcon.ads		20090414134706 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 15|6r6 6r19 7r5 7r18
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[13|45] 15|6w23 7r22
+X 9 a-textio.ads
+48K13*Text_IO 506e16 15|6w10 7r9
+166U14*New_Line 15|25r4 25r14 32r7 32r17
+242U14*Put 15|19r4 22r7 28r7 30r7 33r7 37r4
+X 11 a-tienio.ads
+46k21*Enumeration_IO 75e31 15|11r26 15r29
+52U14 Get 15|29r14[11] 34r17[15]
+60U14 Put 15|21r14[11] 31r14[11]
+X 15 hw_5.adb
+9U11*Hw_5 9b11 40l5 40t9
+10E9 Day_Type 10e59 11r41 12r10 31r18
+10n22 Sun{10E9} 20r16
+10n27 Mon{10E9}
+10n32 Tues{10E9}
+10n38 Wed{10E9}
+10n43 Thurs{10E9}
+10n50 Fri{10E9}
+10n55 Sat{10E9} 20r21
+11K12 Day_Io[11|46] 21r7 29r7 31r7
+12e4 Day{10E9} 29m18 31r32
+14E9 Repeat_Type 14e29 15r44 16r13
+14n25 Y{14E9} 16r28 27r19
+14n27 N{14E9}
+15K12 Repeat_Io[11|46] 34r7
+16e4 Repeat{14E9} 27r10 34m22
+20e8 days{10E9} 21r18
+

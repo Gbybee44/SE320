@@ -1,0 +1,40 @@
+-- Garrison Bybee
+-- 2/5/15
+-- SE 320 Hw5
+-- This program will take an input (day of the week) from the user and display the next day
+
+with Ada.Text_Io, Ada.Integer_Text_Io;
+use Ada.Text_Io, Ada.Integer_Text_Io;
+
+procedure Hw_5 is
+   type Day_Type is (Sun, Mon, Tues, Wed, Thurs, Fri, Sat);
+   package Day_Io is new Enumeration_Io(Day_Type); -- a generic template for day_io to be use with day_type variables
+   Day : Day_Type;
+
+   type Repeat_Type is (Y,N);
+   package Repeat_Io is new Enumeration_Io(Repeat_type); -- a generic template for repeat_io to be used with repeat_type variables
+   Repeat : Repeat_Type := Y;
+
+begin
+   Put("The days of the week are: ");
+   for days in Sun..Sat loop -- for loop used to display the different days of the week at the beginning of the program
+      Day_Io.Put(Days);
+      Put(" "); -- used for formatting the output
+   end loop;
+
+   New_Line;
+
+   while Repeat = Y loop
+      Put ("Name a Day: ");
+      Day_Io.Get(Day);
+      Put("  The next day is ");
+      Day_Io.Put(Day_Type'Succ(Day));
+      New_Line; New_Line;
+      Put("Do you want to do it again? [y for yes, n for no] ");
+      Repeat_Io.Get (Repeat);
+
+   end loop;
+   Put ("Bye");
+
+
+end Hw_5;
